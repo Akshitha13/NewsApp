@@ -17,16 +17,13 @@ import com.example.newsapp.mvvmnewsapp.ui.ui.NewsActivity
 import com.example.newsapp.mvvmnewsapp.ui.ui.NewsViewModel
 import com.example.newsapp.mvvmnewsapp.ui.util.Constants.Companion.QUERY_PAGE_SIZE
 import com.example.newsapp.mvvmnewsapp.ui.util.Resource
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class BreakingNewsFragment : Fragment() {
 
     private lateinit var binding: FragmentBreakingNewsBinding
     private lateinit var viewModel: NewsViewModel
     private lateinit var newsAdapter: NewsAdapter
-
-    companion object {
-        const val TAG = "BreakingNewsFragment"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -103,7 +100,7 @@ class BreakingNewsFragment : Fragment() {
     var isLastPage = false
     var isScrolling = false
 
-    val scrollListener = object : RecyclerView.OnScrollListener() {
+    private val scrollListener = object : RecyclerView.OnScrollListener() {
         override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
             super.onScrollStateChanged(recyclerView, newState)
             if (newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {

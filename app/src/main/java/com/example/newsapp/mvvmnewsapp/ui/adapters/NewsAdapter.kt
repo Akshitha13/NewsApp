@@ -1,15 +1,11 @@
 package com.example.newsapp.mvvmnewsapp.ui.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
-import com.example.newsapp.R
 import com.example.newsapp.databinding.ItemArticlePreviewBinding
 import com.example.newsapp.mvvmnewsapp.ui.models.Article
 
@@ -41,10 +37,9 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
                     .with(holder.itemView.context)
                     .load(article.urlToImage)
                     .into(ivArticleImage)
-              // tvSource.text = article.source.name
+                tvSource.text = article.source?.name
                 tvTitle.text = article.title
-               // tvDescription.text = article.description
-               // tvPublishedAt.text = article.publishedAt
+                tvDescription.text = article.description
             }
         }
         holder.itemView.setOnClickListener {
