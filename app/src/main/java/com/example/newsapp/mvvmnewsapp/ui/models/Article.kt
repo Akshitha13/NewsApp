@@ -25,7 +25,6 @@ data class Article(
     // helps below code to check for null or empty
     override fun hashCode(): Int {
         var result = id.hashCode()
-        Log.d("Akshitha", "hashCode: $result")
         if(url?.isEmpty() == true){
             result = 31 * result + url.hashCode()
         }

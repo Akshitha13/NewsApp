@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/light_pink"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingTop="5dp"
@@ -15,7 +14,6 @@
         android:id="@+id/touchCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_pink"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp">
 

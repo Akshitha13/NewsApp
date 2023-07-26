@@ -32,10 +32,6 @@ class SearchNewsFragment : Fragment() {
     private lateinit var binding: FragmentSearchNewsBinding
     private lateinit var newsAdapter: NewsAdapter
 
-    companion object {
-        private const val TAG = "BreakingNewsFragment"
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
