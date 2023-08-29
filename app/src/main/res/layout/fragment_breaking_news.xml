@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:gravity="start"
-        android:paddingStart="20dp"
+        android:paddingStart="10dp"
         android:paddingEnd="0dp"
         android:paddingBottom="5dp"
         android:text="@string/news_app"
@@ -23,19 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title">
-
-        <include
-            layout="@layout/custom_search_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false" />
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBreakingNews"
         android:layout_width="match_parent"
@@ -46,7 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <ProgressBar
         android:id="@+id/paginationProgressBar"
